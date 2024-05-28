@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { SlArrowLeft, SlArrowRight } from 'react-icons/sl';
 import './Home.css';
 import MoneyChart from './MoneyChart';
@@ -22,7 +22,7 @@ function Home() {
   });
 
   const [details, setDetails] = useState(initialDetails);
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const handleBackMonth = () => {
     setCurrentMonth((prevMonth) => {
@@ -55,8 +55,7 @@ function Home() {
   };
 
   const handleDetailClick = (id) => {
-    history.push({
-      pathname: `/detail/${id}`,
+    navigate(`/detail/${id}`, {
       state: { details, updateDetail, deleteDetail },
     });
   };

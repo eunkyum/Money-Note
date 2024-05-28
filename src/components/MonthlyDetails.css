@@ -40,26 +40,26 @@
   border-bottom: none;
 }
 
-.monthly-details .date {
-  flex: 1;
-  font-size: 14px;
+.monthly-details .date-description {
+  display: flex;
+  flex-direction: column;
+  flex: 2;
 }
 
-.monthly-details .description-amount {
-  display: flex;
-  justify-content: space-between;
-  flex: 2;
-  margin-left: 10px;
+.monthly-details .date {
+  font-size: 10px;
 }
 
 .monthly-details .description {
-  flex: 2;
+  font-size: 14px;
+  margin-top: 5px;
 }
 
 .monthly-details .amount {
   flex: 1;
   text-align: right;
   font-weight: bold;
+  align-self: center;
 }
 
 .monthly-details .amount.income {
@@ -101,9 +101,10 @@
 }
 
 .modal input {
-  width: 100%;
+  width: 100%; /* 입력 필드가 전체 너비를 차지하도록 수정 */
   padding: 8px;
   margin-top: 5px;
+  box-sizing: border-box; /* 패딩과 보더를 포함하여 크기를 계산 */
 }
 
 .modal-buttons {
@@ -115,4 +116,16 @@
   padding: 10px;
   margin-top: 10px;
   cursor: pointer;
+  border: none; /* 테두리 삭제 */
+  border-radius: 10px; /* 테두리 둥글게 */
+}
+
+.modal-buttons button.add {
+  background-color: #0000cd;
+  color: white;
+}
+
+.modal-buttons button.cancel {
+  background-color: #cd0000;
+  color: white;
 }

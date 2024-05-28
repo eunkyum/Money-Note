@@ -1,19 +1,20 @@
 import React, { useState, useEffect } from 'react';
-import { useParams, useHistory } from 'react-router-dom';
+import { useParams, useLocation, useNavigate } from 'react-router-dom';
 import './Detail.css';
 
-const Detail = ({ location }) => {
+const Detail = () => {
   const { id } = useParams();
+  const location = useLocation();
   const { details, updateDetail, deleteDetail } = location.state;
   const detail = details.find((detail, index) => index === parseInt(id));
   const [updatedDetail, setUpdatedDetail] = useState(detail);
-  const history = useHistory();
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (!detail) {
-      history.push('/');
+      navigate('/');
     }
-  }, [detail, history]);
+  }, [detail, navigate]);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -22,12 +23,12 @@ const Detail = ({ location }) => {
 
   const handleUpdate = () => {
     updateDetail(parseInt(id), updatedDetail);
-    history.push('/');
+    navigate('/');
   };
 
   const handleDelete = () => {
     deleteDetail(parseInt(id));
-    history.push('/');
+    navigate('/');
   };
 
   if (!detail) return <div>항목을 찾을 수 없습니다.</div>;
