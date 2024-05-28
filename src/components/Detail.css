@@ -1,0 +1,35 @@
+.detail-page {
+  background: #fff;
+  color: #333;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+.detail-page h2 {
+  margin-top: 0;
+}
+
+.detail-page label {
+  display: block;
+  margin: 10px 0;
+}
+
+.detail-page input {
+  width: calc(100% - 20px);
+  padding: 5px;
+  margin-top: 5px;
+}
+
+.detail-page-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.detail-page-buttons button {
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+}

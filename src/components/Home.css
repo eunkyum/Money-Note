@@ -1,0 +1,68 @@
+body {
+  background-color: #333; /* 배경색 설정 */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+  margin: 0;
+  font-size: 14px;
+  color: #fff;
+  overflow: auto; /* 스크롤 생성을 위해 추가 */
+}
+
+.App {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center; /* 자식 요소들을 중앙 정렬 */
+}
+
+.chart-container {
+  width: 100%;
+  height: 300px; /* 차트 컨테이너 높이 감소 */
+  margin: 0 auto;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 수평 중앙 정렬 */
+  justify-content: flex-start; /* 수직 상단 정렬 */
+  width: 100%;
+  max-width: 1000px;
+  font-size: 1rem; /* 기본 폰트 크기 설정 */
+  padding: 20px;
+
+  border-radius: 10px; /* 선택 사항: 모서리 둥글게 */
+  margin: 0 20px; /* 좌우 여백 감소 */
+}
+
+.home h2 {
+  font-size: 1.2rem; /* h2 폰트 크기 설정 */
+  margin-bottom: 10px; /* h2와 아래 요소 사이의 간격을 줄임 */
+}
+
+.month-selector {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.month-selector button {
+  background: none;
+  border: none;
+  font-size: 1.5rem; /* 버튼 폰트 크기 설정 */
+  cursor: pointer;
+  padding: 0 5px; /* 좌우 패딩 줄임 */
+  color: #fff; /* 버튼 텍스트 색상 흰색 */
+}
+
+.month-selector span {
+  font-size: 2rem; /* 년, 월 텍스트 크기 증가 */
+  margin: 0 10px;
+  color: #fff; /* 월 선택기 텍스트 색상 흰색 */
+}
